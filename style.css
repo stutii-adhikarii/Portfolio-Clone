@@ -998,4 +998,119 @@ ul {
   z-index: 100;
 }
 
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  .side-photo {
+    display: none;
+  }
+
+  .side-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px 20px;
+  }
+
+  .side-copy {
+    display: none;
+  }
+
+  .main {
+    margin-left: 0;
+  }
+
+  .hero {
+    padding: 120px 25px 80px;
+  }
+
+  .top-info {
+    gap: 30px;
+    font-size: 14px;
+    left: 20px;
+  }
+
+  .hero-img,
+  .hero-social {
+    display: none;
+  }
+
+  .about,
+  .resume,
+  .services,
+  .faq,
+  .portfolio,
+  .testimonial,
+  .pricing,
+  .blog,
+  .contact {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .about-top,
+  .resume-wrap,
+  .skill-wrap,
+  .testi-row,
+  .price-row,
+  .blog-row,
+  .contact-wrap,
+  .port-head {
+    flex-direction: column;
+  }
+
+  .about-img {
+    flex: none;
+    width: 100%;
+  }
+
+  .counter-row {
+    flex-wrap: wrap;
+  }
+
+  .counter-box {
+    flex: 1 1 40%;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .port-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .port-grid {
+    column-count: 1;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .cta h2 {
+    font-size: 28px;
+  }
+
+  .info-grid {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
 
