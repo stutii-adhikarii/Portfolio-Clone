@@ -867,5 +867,135 @@ ul {
   line-height: 1.4;
 }
 
+/* CONTACT + FOOTER */
+.contact {
+  background: #e5bf45;
+  padding: 90px 40px 0 70px;
+}
+
+.contact .sec-title span {
+  color: #f1dc9a;
+}
+
+.contact-wrap {
+  display: flex;
+  gap: 80px;
+}
+
+.contact-form {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid #14142b;
+  padding: 22px 35px;
+  font-family: inherit;
+  font-size: 18px;
+  color: #14142b;
+  margin-bottom: 8px;
+  outline: none;
+  resize: vertical;
+}
+
+.contact-form ::placeholder {
+  color: #8a7a44;
+}
+
+.btn-dark {
+  align-self: center;
+  margin-top: 40px;
+  background: #171a38;
+  color: #fff;
+  border: none;
+  padding: 16px 45px;
+  font-family: inherit;
+  font-size: 19px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-dark:hover {
+  background: #fff;
+  color: #171a38;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-info p {
+  font-size: 22px;
+  color: #14142b;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.contact-info p i {
+  font-size: 26px;
+  width: 30px;
+}
+
+.map-box {
+  height: 180px;
+  background: #ececec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  margin-top: 25px;
+  width: 80%;
+  border: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 70px;
+  padding: 35px 0 40px;
+  font-size: 19px;
+  color: #3a3560;
+}
+
+.footer-social {
+  display: flex;
+  gap: 18px;
+}
+
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3a3560;
+}
+
+/* BACK TO TOP */
+.to-top {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  width: 60px;
+  height: 60px;
+  background: #171a38;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  z-index: 100;
+}
 
 
