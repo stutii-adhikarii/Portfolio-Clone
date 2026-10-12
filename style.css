@@ -32,7 +32,7 @@ ul {
 }
 
 .yellow {
-  color: #f2cd4a;
+  color: #F9CA21;
 }
 
 .side-photo img,
@@ -48,7 +48,7 @@ ul {
   position: fixed;
   top: 0;
   left: 0;
-  width: 230px;
+  width: 210px;
   height: 100vh;
   background: #171a38;
   color: #fff;
@@ -56,7 +56,7 @@ ul {
 }
 
 .side-photo {
-  height: 180px;
+  height: 164px;
   background: #f1f1f1;
   display: flex;
   align-items: center;
@@ -66,20 +66,20 @@ ul {
 }
 
 .side-name {
-  background: #f2cd4a;
+  background: #F9CA21;
   color: #14142b;
   text-align: center;
-  padding: 14px 0;
+  padding: 10px 0;
   font-size: 17px;
 }
 
 .side-menu {
-  padding: 40px 0 0 45px;
+  padding: 40px 0 0 42px;
 }
 
 .side-menu li a {
   display: block;
-  padding: 11px 0;
+  padding: 8px 0;
   font-size: 16px;
   color: #fff;
   transition: 0.3s;
@@ -91,18 +91,18 @@ ul {
 }
 
 .side-menu li a:hover {
-  color: #f2cd4a;
+  color: #F9CA21;
 }
 
 .side-copy {
-  padding: 35px 0 0 20px;
+  padding: 20px 0 0 20px;
   font-size: 14px;
   color: #a5a7bd;
 }
 
 /* MAIN AREA */
 .main {
-  margin-left: 230px;
+  margin-left: 210px;
 }
 
 .sec-title {
@@ -144,20 +144,55 @@ ul {
 }
 
 .btn-yellow {
+  position: relative;
+  isolation: isolate;
   display: inline-block;
-  background: #f2cd4a;
+  background: transparent;
   color: #14142b;
-  padding: 14px 32px;
+  padding: 11px 26px;
   border-radius: 4px;
   font-size: 16px;
   font-weight: 500;
-  transition: 0.3s;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.btn-yellow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #F9CA21;
+  border-radius: 4px;
+  z-index: -1;
+  transition: inset 0.3s, transform 0.3s;
 }
 
 .btn-yellow:hover {
-  background: #f2cd4a;
   color: #fff;
-  padding: 14px 44px;
+  transform: scale(1.06);
+}
+
+.btn-yellow:hover::before {
+  inset: 0 -2px;
+  transform: scaleY(0.943);
+}
+
+.hero-content .btn-yellow {
+  animation: fadeUp 1s ease 1.8s backwards;
+  transform-origin: left center;
+}
+
+.hero-content .btn-yellow:hover {
+  transform: scale(1.06);
+  transform-origin: left center;
+}
+
+.hero-content .btn-yellow::before {
+  transform-origin: left center;
+}
+
+.hero-content .btn-yellow:hover::before {
+  inset: 0 -2px 0 0;
+  transform: scaleY(0.943);
 }
 
 .center-btn {
@@ -206,7 +241,7 @@ ul {
   top: -40px;
   width: 3px;
   height: 26px;
-  background: #f2cd4a;
+  background: #F9CA21;
   animation: lineMove 6s linear infinite;
 }
 
@@ -234,16 +269,16 @@ ul {
   color: #fff;
   display: flex;
   align-items: center;
-  padding: 0 0 0 11%;
+  padding: 0 0 0 11.5%;
   overflow: hidden;
 }
 
 .top-info {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 30px;
+  left: 32px;
   display: flex;
-  gap: 130px;
+  gap: 180px;
   font-size: 18px;
   z-index: 3;
 }
@@ -251,10 +286,10 @@ ul {
 .top-mail-btn {
   position: absolute;
   top: 0;
-  right: 30px;
+  right: 0;
   width: 80px;
   height: 60px;
-  background: #f2cd4a;
+  background: #F9CA21;
   color: #14142b;
   font-size: 22px;
   display: flex;
@@ -270,7 +305,7 @@ ul {
 }
 
 .hero-content h1 {
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 600;
   line-height: 1.2;
 }
@@ -297,7 +332,6 @@ ul {
   animation: fadeUp 1s ease 1.2s both;
 }
 
-/* typing words: they sit on top of each other, only one shows at a time */
 .typing {
   position: relative;
   height: 38px;
@@ -313,7 +347,6 @@ ul {
   border-right: 2px solid #fff;
 }
 
-/* each word: typing animation (12s loop) + blinking cursor, started 4s after the one before */
 .type1 {
   animation: type1 12s infinite backwards, cursorBlink 0.8s step-end infinite;
   animation-delay: 2s, 0s;
@@ -330,14 +363,14 @@ ul {
 }
 
 .hero-content p {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   margin-bottom: 40px;
   animation: fadeUp 1s ease 1.5s both;
 }
 
 .hero-content .btn-yellow {
-  animation: fadeUp 1s ease 1.8s both;
+  animation: fadeUp 1s ease 1.8s backwards;
 }
 
 .hero-img {
@@ -352,17 +385,17 @@ ul {
 
 .hero-social {
   position: absolute;
-  right: 40px;
+  right: 50px;
   top: 30%;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 14px;
   z-index: 3;
 }
 
 .hero-social a {
-  width: 46px;
-  height: 46px;
+  width: 37px;
+  height: 37px;
   border: 1px solid #5d5f80;
   border-radius: 5px;
   display: flex;
@@ -375,9 +408,9 @@ ul {
 }
 
 .hero-social a:hover {
-  border-color: #f2cd4a;
+  border-color: #F9CA21;
   border-radius: 50%;
-  color: #f2cd4a;
+  color: #F9CA21;
 }
 
 .scroll-mouse {
@@ -386,7 +419,7 @@ ul {
   left: 50%;
   width: 20px;
   height: 34px;
-  border: 2px solid #f2cd4a;
+  border: 2px solid #F9CA21;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -399,7 +432,7 @@ ul {
 
 .scroll-mouse span {
   display: block;
-  background: #f2cd4a;
+  background: #F9CA21;
   border-radius: 50%;
 }
 
@@ -460,7 +493,7 @@ ul {
 }
 
 .info-grid li i {
-  color: #f2cd4a;
+  color: #F9CA21;
   width: 30px;
 }
 
@@ -484,7 +517,7 @@ ul {
 
 .counter-box i {
   font-size: 34px;
-  color: #f2cd4a;
+  color: #F9CA21;
 }
 
 .counter-box h4 {
@@ -564,7 +597,7 @@ ul {
   top: 50%;
   width: 8px;
   height: 8px;
-  background: #f2cd4a;
+  background: #F9CA21;
   border: 3px solid #171a38;
   border-radius: 50%;
   box-sizing: content-box;
@@ -576,7 +609,7 @@ ul {
   left: 30px;
   top: 38px;
   font-size: 28px;
-  color: #f2cd4a;
+  color: #F9CA21;
 }
 
 .time-card h4 {
@@ -624,7 +657,7 @@ ul {
 
 .skill-fill {
   height: 4px;
-  background: #f2cd4a;
+  background: #F9CA21;
   transform-origin: left;
 }
 
@@ -637,7 +670,7 @@ ul {
 .service-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 15px;
 }
 
 .service-card {
@@ -645,7 +678,7 @@ ul {
   overflow: hidden;
   z-index: 0;
   background: #fff;
-  padding: 50px 40px 50px;
+  padding: 45px 40px;
   border-radius: 10px;
   box-shadow: 0 5px 40px rgba(0, 0, 0, 0.05);
   transition: 0.3s;
@@ -658,7 +691,7 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #f2cd4a;
+  background: #F9CA21;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s ease;
@@ -674,8 +707,8 @@ ul {
 }
 
 .service-icon {
-  width: 80px;
-  height: 80px;
+  width: 65px;
+  height: 65px;
   background: #f4f6fc;
   border-radius: 50%;
   display: flex;
@@ -692,15 +725,15 @@ ul {
 }
 
 .service-card h3 {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 600;
   color: #3a3560;
   margin-bottom: 20px;
 }
 
 .service-card li {
-  font-size: 17px;
-  padding: 6px 0;
+  font-size: 16px;
+  padding: 4px 0;
 }
 
 .service-card li i {
@@ -712,10 +745,10 @@ ul {
 /* CTA BANNER */
 .cta {
   position: relative;
-  background: url(images/cta-bg.png) center / cover no-repeat;
+  background: url(images/cta-bg.png) center / cover no-repeat fixed;
   background-color: #1d1d3d;
   text-align: center;
-  padding: 100px 20px 110px;
+  padding: 90px 20px;
   overflow: clip;
 }
 
@@ -731,14 +764,14 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 60px;
+  gap: 90px;
   position: relative;
 }
 
 .play-btn {
-  width: 80px;
-  height: 80px;
-  background: #f2cd4a;
+  width: 64px;
+  height: 64px;
+  background: #F9CA21;
   color: #14142b;
   border-radius: 50%;
   display: flex;
@@ -749,18 +782,18 @@ ul {
 
 .btn-outline {
   display: inline-block;
-  border: 2px solid #f2cd4a;
-  color: #f2cd4a;
-  padding: 14px 34px;
+  border: 2px solid #F9CA21;
+  color: #F9CA21;
+  padding: 9px 26px;
   border-radius: 4px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   transition: 0.3s;
 }
 
 .btn-outline:hover {
   background: transparent;
-  color: #f2cd4a;
+  color: #F9CA21;
   transform: scale(1.1);
 }
 
@@ -851,8 +884,8 @@ ul {
 }
 
 .port-tabs li.active a {
-  color: #f2cd4a;
-  border-bottom: 3px solid #f2cd4a;
+  color: #F9CA21;
+  border-bottom: 3px solid #F9CA21;
   margin-bottom: -2px;
 }
 
@@ -916,7 +949,7 @@ ul {
 
 .port-overlay h6,
 .port-overlay h4 {
-  color: #f2cd4a;
+  color: #F9CA21;
   font-weight: 700;
   text-align: left;
 }
@@ -938,13 +971,13 @@ ul {
 .testi-row {
   position: relative;
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 
 .testi-card {
   flex: 1;
   background: #fff;
-  padding: 50px 60px 55px 70px;
+  padding: 50px 40px;
   border-radius: 8px;
   box-shadow: 0 5px 40px rgba(0, 0, 0, 0.06);
 }
@@ -953,7 +986,7 @@ ul {
   display: block;
   text-align: center;
   font-size: 44px;
-  color: #f2cd4a;
+  color: #F9CA21;
   margin-bottom: 40px;
 }
 
@@ -1003,12 +1036,12 @@ ul {
 .dots span {
   width: 14px;
   height: 14px;
-  border: 1px solid #f2cd4a;
+  border: 1px solid #F9CA21;
   border-radius: 50%;
 }
 
 .dots span.on {
-  background: #f2cd4a;
+  background: #F9CA21;
 }
 
 /* PRICING */
@@ -1038,7 +1071,7 @@ ul {
   align-items: center;
   justify-content: center;
   font-size: 28px;
-  color: #f2cd4a;
+  color: #F9CA21;
   margin-bottom: 35px;
 }
 
@@ -1090,7 +1123,7 @@ ul {
 
 .blog-row {
   display: flex;
-  gap: 25px;
+  gap: 20px;
 }
 
 .blog-card {
@@ -1100,7 +1133,7 @@ ul {
 }
 
 .blog-img {
-  height: 260px;
+  height: 298px;
 }
 
 .b1 {
@@ -1141,12 +1174,12 @@ ul {
 }
 
 .blog-card:hover .blog-body h4 {
-  color: #f2cd4a;
+  color: #F9CA21;
 }
 
 /* CONTACT + FOOTER */
 .contact {
-  background: #e5bf45;
+  background: #F9CA21;
   padding: 80px 40px 0 70px;
 }
 
@@ -1184,22 +1217,38 @@ ul {
 }
 
 .btn-dark {
+  position: relative;
+  isolation: isolate;
   align-self: center;
   margin-top: 40px;
-  background: #171a38;
+  background: transparent;
   color: #fff;
   border: none;
   padding: 16px 45px;
   font-family: inherit;
   font-size: 19px;
   font-weight: 500;
-  border-radius: 4px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: transform 0.3s;
+}
+
+.btn-dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #171a38;
+  border-radius: 4px;
+  z-index: -1;
+  transition: inset 0.3s, transform 0.3s;
 }
 
 .btn-dark:hover {
-  padding: 16px 65px;
+  transform: scale(1.06);
+}
+
+.btn-dark:hover::before {
+  inset: 0 -5px;
+  transform: scaleY(0.943);
 }
 
 .contact-info {
@@ -1701,6 +1750,11 @@ ul {
 
   .port-grid {
     column-count: 2;
+  }
+
+
+  .cta {
+    background-attachment: scroll;
   }
 }
 
